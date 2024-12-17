@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.Comment;
 
 import javax.persistence.*;
 
@@ -20,15 +21,23 @@ public class Currency {
     private Long id;
 
     @Column(name = "name")
+    @Comment("Наименование валюты")
     private String name;
 
     @Column(name = "nominal")
+    @Comment("Номинал валюты")
     private Long nominal;
 
     @Column(name = "value")
+    @Comment("Стоимость валюты в рублях")
     private Double value;
 
     @Column(name = "iso_num_code")
+    @Comment("Числовой код ISO")
     private Long isoNumCode;
+
+    @Column(name = "iso_letter_code",length = 50)
+    @Comment("Буквенный код ISO")
+    private String isoLetterCode;
 
 }

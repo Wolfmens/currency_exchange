@@ -21,3 +21,10 @@ spring:
         hbm2ddl:
           auto: none
 
+app:
+  api:
+    baseUrl:
+      v1: https://cbr.ru/scripts/XML_daily.asp
+      v2: https://www.cbr-xml-daily.ru/daily_utf8.xml
+    updateDurationCron:
+
