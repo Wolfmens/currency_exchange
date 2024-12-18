@@ -1,8 +1,8 @@
-package ru.skillbox.currency.exchange.v1_api_currence_cb.mapper;
+package ru.skillbox.currency.exchange.api_currence_cb.mapper;
 
 import org.springframework.stereotype.Component;
 import ru.skillbox.currency.exchange.entity.Currency;
-import ru.skillbox.currency.exchange.v1_api_currence_cb.dto.ValutesApiCurrencyCb;
+import ru.skillbox.currency.exchange.api_currence_cb.dto.ValutesApiCurrencyCb;
 
 import java.util.List;
 import java.util.stream.Collectors;

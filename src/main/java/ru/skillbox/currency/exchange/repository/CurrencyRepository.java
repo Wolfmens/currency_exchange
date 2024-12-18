@@ -6,6 +6,7 @@ import ru.skillbox.currency.exchange.entity.Currency;
 import ru.skillbox.currency.exchange.repository.projection.CurrencyProjectionForAllCurrencyRequest;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface CurrencyRepository extends JpaRepository<Currency, Long> {
 
@@ -13,4 +14,6 @@ public interface CurrencyRepository extends JpaRepository<Currency, Long> {
     List<CurrencyProjectionForAllCurrencyRequest> findAllCurrencies();
 
     Currency findByIsoNumCode(Long isoNumCode);
+
+    Currency findByIsoLetterCode(String isoLetterCode);
 }

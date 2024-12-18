@@ -1,6 +1,7 @@
 package ru.skillbox.currency.exchange.entity;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -11,6 +12,7 @@ import javax.persistence.*;
 @Setter
 @Getter
 @Entity
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 public class Currency {
@@ -36,8 +38,17 @@ public class Currency {
     @Comment("Числовой код ISO")
     private Long isoNumCode;
 
-    @Column(name = "iso_letter_code",length = 50)
+    @Column(name = "iso_letter_code", length = 50)
     @Comment("Буквенный код ISO")
     private String isoLetterCode;
 
+    public static Currency from(Currency currencyCb) {
+        return Currency.builder()
+                .name(currencyCb.getName())
+                .isoLetterCode(currencyCb.getIsoLetterCode())
+                .isoNumCode(currencyCb.getIsoNumCode())
+                .nominal(currencyCb.getNominal())
+                .value(currencyCb.getValue())
+                .build();
+    }
 }
