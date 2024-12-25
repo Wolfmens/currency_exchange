@@ -1,9 +1,8 @@
-package ru.skillbox.currency.exchange.api_currence_cb.service;
+package ru.skillbox.currency.exchange.gateway.currencycbr.service;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 import org.springframework.web.reactive.function.client.WebClientRequestException;

@@ -1,4 +1,4 @@
-package ru.skillbox.currency.exchange.api_currence_cb.config;
+package ru.skillbox.currency.exchange.gateway.currencycbr.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
